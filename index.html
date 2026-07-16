@@ -25,6 +25,7 @@ Fathima Juwairiyah Marohonsalic Tandayao
 Together since <b>May 17, 2026</b>
 </p>
 
+
 <p>
 To my love,
 
@@ -59,6 +60,7 @@ I love you endlessly.
 
 <br><br>
 
+
 <h2>📸 Our Memories</h2>
 
 <img src="IMG_20260418_012316_361.jpg">
@@ -74,9 +76,15 @@ I love you endlessly.
 <img src="Screenshot_20260701-230520.jpg">
 
 
+<br><br>
+
+
 <h2>⏳ Time Together</h2>
 
 <p id="timer"></p>
+
+
+<br>
 
 
 <audio id="music" loop>
@@ -90,6 +98,7 @@ I love you endlessly.
 
 
 </div>
+
 
 
 <script src="script.js"></script>
@@ -127,7 +136,9 @@ heart.remove();
 setInterval(createHeart,500);
 
 
-// Timer
+
+
+// Monthsary Timer
 
 const startDate = new Date("2026-05-17T00:00:00");
 
@@ -139,20 +150,21 @@ const now = new Date();
 const difference = now - startDate;
 
 
-const days = Math.floor(difference/(1000*60*60*24));
+const days = Math.floor(difference / (1000 * 60 * 60 * 24));
 
-const hours = Math.floor((difference/(1000*60*60))%24);
+const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
 
-const minutes = Math.floor((difference/(1000*60))%60);
+const minutes = Math.floor((difference / (1000 * 60)) % 60);
 
-const seconds = Math.floor((difference/1000)%60);
+const seconds = Math.floor((difference / 1000) % 60);
 
 
 document.getElementById("timer").innerHTML =
-days + " Days ❤️ " +
-hours + " Hours 💙 " +
-minutes + " Minutes 💕 " +
-seconds + " Seconds";
+
+"❤️ " + days + " Days " +
+"💙 " + hours + " Hours " +
+"💕 " + minutes + " Minutes " +
+"✨ " + seconds + " Seconds";
 
 }
 
@@ -160,6 +172,7 @@ seconds + " Seconds";
 setInterval(updateTimer,1000);
 
 updateTimer();
+
 
 </script>
 
