@@ -55,3 +55,22 @@ font-size:22px;
 font-weight:bold;
 color:white;
 }
+html, body {
+  min-height: 100%;
+  margin: 0;
+  background: linear-gradient(-45deg, #dff6ff, #bde0fe, #a2d2ff, #e0f7ff);
+  background-size: 400% 400%;
+  animation: blueDream 10s ease infinite;
+}
+
+@keyframes blueDream {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+    }
