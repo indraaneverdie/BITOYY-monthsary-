@@ -81,3 +81,51 @@ img:hover {
     opacity: 0;
   }
 }
+#heartMessage {
+  display: none;
+  width: 220px;
+  height: 200px;
+  margin: 40px auto;
+  background: #ff6b9d;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 70px;
+  box-sizing: border-box;
+  position: relative;
+  transform: rotate(-45deg);
+  animation: heartPop 0.8s ease;
+  border-radius: 50%;
+}
+
+#heartMessage::before,
+#heartMessage::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 200px;
+  background: #ff6b9d;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+#heartMessage::before {
+  top: -100px;
+  left: 0;
+}
+
+#heartMessage::after {
+  left: 100px;
+  top: 0;
+}
+
+@keyframes heartPop {
+  from {
+    transform: rotate(-45deg) scale(0);
+  }
+
+  to {
+    transform: rotate(-45deg) scale(1);
+  }
+}
