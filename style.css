@@ -1,11 +1,10 @@
-<style>
-
 body {
   margin: 0;
   min-height: 100vh;
   font-family: Arial, sans-serif;
   text-align: center;
   color: white;
+  overflow-x: hidden;
 
   background: linear-gradient(120deg, #dff6ff, #a2d2ff, #bde0fe, #e0f7ff);
   background-size: 300% 300%;
@@ -26,29 +25,26 @@ body {
   }
 }
 
-
 /* Title */
 h1 {
   margin-top: 30px;
   font-size: 40px;
-  text-shadow: 0 0 10px rgba(255,255,255,0.8);
+  text-shadow: 0 0 15px white;
 }
 
-
-/* Message */
+/* Text */
 p {
   font-size: 18px;
   line-height: 1.6;
   margin: 20px;
 }
 
-
-/* Pictures */
+/* Photos */
 img {
   width: 250px;
   border-radius: 20px;
   margin: 10px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+  box-shadow: 0 0 20px rgba(255,255,255,0.6);
   transition: 0.3s;
 }
 
@@ -56,38 +52,32 @@ img:hover {
   transform: scale(1.05);
 }
 
-
-/* Monthsary timer */
+/* Timer */
 #timer {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
-  color: white;
   margin: 20px;
+  text-shadow: 0 0 10px #ffffff;
 }
-
 
 /* Floating hearts */
 .heart {
   position: fixed;
   bottom: -20px;
   font-size: 25px;
-  animation: floatUp 5s linear forwards;
+  animation: floatHeart 5s linear infinite;
   pointer-events: none;
   z-index: 9999;
 }
 
-@keyframes floatUp {
-
-  from {
+@keyframes floatHeart {
+  0% {
     transform: translateY(0) scale(1);
     opacity: 1;
   }
 
-  to {
+  100% {
     transform: translateY(-100vh) scale(1.5);
     opacity: 0;
   }
-
 }
-
-</style>
