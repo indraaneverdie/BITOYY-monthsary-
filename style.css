@@ -1,98 +1,93 @@
-img{<style><style>
-body {
-  background: linear-gradient(-45deg, #dff6ff, #bde0fe, #a2d2ff, #e0f7ff);
-  background-size: 400% 400%;
-  animation: blueDream 12s ease infinite;
-}
-
-@keyframes blueDream {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-</style>
-body {
-  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffd1ff, #ffdde1);
-  background-size: 400% 400%;
-  animation: backgroundMove 10s ease infinite;
-}
-
-@keyframes backgroundMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-</style>
-width:250px;
-border-radius:20px;
-margin:10px;
-box-shadow:0 0 20px rgba(255,255,255,.5);
-transition:.3s;
-}
-
-img:hover{
-transform:scale(1.05);
-}
-
-h2{
-margin:20px;
-}
-
-#timer{
-font-size:22px;
-font-weight:bold;
-color:white;
-}
-html, body {
-  min-height: 100%;
-  margin: 0;
-  background: linear-gradient(-45deg, #dff6ff, #bde0fe, #a2d2ff, #e0f7ff);
-  background-size: 400% 400%;
-  animation: blueDream 10s ease infinite;
-}
-
-@keyframes blueDream {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-    }html {
-  background: #dff6ff;
-}
+<style>
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(120deg, #dff6ff, #a2d2ff, #e0f7ff);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: white;
+
+  background: linear-gradient(120deg, #dff6ff, #a2d2ff, #bde0fe, #e0f7ff);
   background-size: 300% 300%;
-  animation: blueMove 8s ease infinite;
+  animation: blueMove 10s ease infinite;
 }
 
 @keyframes blueMove {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
+
+
+/* Title */
+h1 {
+  margin-top: 30px;
+  font-size: 40px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+
+/* Message */
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+
+/* Pictures */
+img {
+  width: 250px;
+  border-radius: 20px;
+  margin: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+  transition: 0.3s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Monthsary timer */
+#timer {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  margin: 20px;
+}
+
+
+/* Floating hearts */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 25px;
+  animation: floatUp 5s linear forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes floatUp {
+
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+
+}
+
+</style>
