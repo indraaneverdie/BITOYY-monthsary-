@@ -31,7 +31,7 @@ To my love,
 
 <br><br>
 
-Happy Monthsary, my love. Every moment with you is a blessing that I'll always treasure.
+Happy Monthsary, my DEAREEEEE. Every moment with you is a blessing that I'll always treasure.
 
 Thank you for staying beside me through everything.
 
@@ -56,6 +56,19 @@ I love you endlessly.
 <button onclick="showLove()">
 💌 Open My Heart
 </button>
+
+
+<!-- Heart Message -->
+
+<div id="heartMessage">
+❤️
+<br>
+My heart belongs to you.
+<br><br>
+Thank you for being part of my life.
+<br><br>
+I love you endlessly. 💙
+</div>
 
 
 <br><br>
@@ -106,9 +119,32 @@ I love you endlessly.
 
 <script>
 
-// Floating hearts
+// Open Heart Button
+
+function showLove(){
+
+const heart = document.getElementById("heartMessage");
+
+if(heart.style.display === "block"){
+
+heart.style.display = "none";
+
+}
+
+else{
+
+heart.style.display = "block";
+
+}
+
+}
+
+
+
+// Floating Hearts
 
 const hearts = ["❤️","💕","💖","💗","💘"];
+
 
 function createHeart(){
 
@@ -132,6 +168,7 @@ heart.remove();
 },6000);
 
 }
+
 
 setInterval(createHeart,500);
 
