@@ -1,17 +1,15 @@
-<script src="script.js"></script>
-<audio id="music" loop>
-    <source src="JVKE_-_her_(mp3.pm).mp3" type="audio/mpeg">
-</audio>
-
-<button onclick="toggleMusic()">🎵 Play / Pause Our Song</button>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Happy Monthsary ❤️</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
@@ -20,120 +18,185 @@
 <h1>Happy Monthsary 💙</h1>
 
 <h2>
-Franz Lhenard N. Cuevas ❤️
+Franz Lhenard N. Cuevas ❤️<br>
 Fathima Juwairiyah Marohonsalic Tandayao
 </h2>
+
 
 <p>
 Together since
 <b>May 17, 2026</b>
 </p>
 
+
 <p>
 To my love,
 
-Happy Monthsary, my love. Every moment with you is a blessing that I'll always treasure. Thank you for staying beside me through everything.
+<br><br>
+
+Happy Monthsary, my love. Every moment with you is a blessing that I'll always treasure.
+
+Thank you for staying beside me through everything.
+
+<br><br>
 
 I promise to love you, respect you, support you, and choose you every single day.
 
+<br><br>
+
 No matter what happens, I hope we continue creating beautiful memories together.
+
+<br><br>
 
 I love you endlessly.
 
+<br><br>
+
 ❤️ Franz
 </p>
+
 
 <button onclick="showLove()">
 💌 Open My Heart
 </button>
 
+
 <br><br>
+
 
 <h2>📸 Our Memories</h2>
 
-<img src="IMG_20260418_012316_361.jpg" width="250">
 
-<img src="Messenger_creation_20EBF1F1-E947-46F8-9318-7C3BAC04DE5F.jpeg" width="250">
+<img src="IMG_20260418_012316_361.jpg">
 
-<img src="Messenger_creation_44627DEB-A4AF-48F1-902D-E49CFB9C7119.jpeg" width="250">
 
-<img src="Messenger_creation_4949B1AE-92CB-4332-93EF-6AD1D14FE9D2.jpeg" width="250">
+<img src="Messenger_creation_20EBF1F1-E947-46F8-9318-7C3BAC04DE5F.jpeg">
 
-<img src="Messenger_creation_C22F490E-ADDD-47EF-8714-CE3DABCFF4DC.jpeg" width="250">
 
-<img src="Screenshot_20260701-230520.jpg" width="250">
+<img src="Messenger_creation_44627DEB-A4AF-48F1-902D-E49CFB9C7119.jpeg">
+
+
+<img src="Messenger_creation_4949B1AE-92CB-4332-93EF-6AD1D14FE9D2.jpeg">
+
+
+<img src="Messenger_creation_C22F490E-ADDD-47EF-8714-CE3DABCFF4DC.jpeg">
+
+
+<img src="Screenshot_20260701-230520.jpg">
+
 
 <br><br>
+
 
 <h2>⏳ Time Together</h2>
 
 <p id="timer"></p>
 
+
+<br>
+
+
+<audio id="music" loop>
+    <source src="JVKE_-_her_(mp3.pm).mp3" type="audio/mpeg">
+</audio>
+
+
+<button onclick="toggleMusic()">
+🎵 Play / Pause Our Song
+</button>
+
+
 </div>
+
+
 
 <script src="script.js"></script>
 
-</body>
-</html>
+
 <script>
+
+
+// Floating hearts
+
 const hearts = ["❤️","💕","💖","💗","💘"];
 
-function createHeart() {
-  const heart = document.createElement("div");
-  heart.className = "heart";
-  heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
-  document.body.appendChild(heart);
 
-  setTimeout(() => {
-    heart.remove();
-  }, 6000);
+function createHeart(){
+
+const heart = document.createElement("div");
+
+heart.className = "heart";
+
+heart.innerHTML = hearts[Math.floor(Math.random()*hearts.length)];
+
+heart.style.left = Math.random()*100 + "vw";
+
+heart.style.animationDuration = (Math.random()*3+3)+"s";
+
+
+document.body.appendChild(heart);
+
+
+setTimeout(()=>{
+
+heart.remove();
+
+},6000);
+
 }
 
-setInterval(createHeart, 500);
+
+setInterval(createHeart,500);
+
+
+
+
+
+// Monthsary Timer
+
+
+const startDate = new Date("2026-05-17T00:00:00");
+
+
+function updateTimer(){
+
+const now = new Date();
+
+const difference = now - startDate;
+
+
+const days = Math.floor(difference/(1000*60*60*24));
+
+const hours = Math.floor((difference/(1000*60*60))%24);
+
+const minutes = Math.floor((difference/(1000*60))%60);
+
+const seconds = Math.floor((difference/1000)%60);
+
+
+
+document.getElementById("timer").innerHTML =
+
+days + " Days ❤️ " +
+
+hours + " Hours 💙 " +
+
+minutes + " Minutes 💕 " +
+
+seconds + " Seconds";
+
+}
+
+
+setInterval(updateTimer,1000);
+
+updateTimer();
+
+
+
 </script>
 
-<style>
-.heart {
-  position: fixed;
-  bottom: -20px;
-  font-size: 25px;
-  animation: floatUp 5s linear forwards;
-  pointer-events: none;
-  z-index: 9999;
-}
 
-@keyframes floatUp {
-  from {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-100vh) scale(1.5);
-    opacity: 0;
-  }
-}
-</style>
-<script>
-const startDate = new Date("2026-06-16T00:00:00");
+</body>
 
-function updateTimer() {
-  const now = new Date();
-  const difference = now - startDate;
-
-  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((difference / (1000 * 60)) % 60);
-  const seconds = Math.floor((difference / 1000) % 60);
-
-  document.getElementById("timer").innerHTML =
-    days + " Days ❤️ " +
-    hours + " Hours 💙 " +
-    minutes + " Minutes 💕 " +
-    seconds + " Seconds";
-}
-
-setInterval(updateTimer, 1000);
-updateTimer();
-    </script>
+</html>
