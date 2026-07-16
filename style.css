@@ -1,4 +1,22 @@
-img{
+img{<style>
+body {
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffd1ff, #ffdde1);
+  background-size: 400% 400%;
+  animation: backgroundMove 10s ease infinite;
+}
+
+@keyframes backgroundMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+</style>
 width:250px;
 border-radius:20px;
 margin:10px;
