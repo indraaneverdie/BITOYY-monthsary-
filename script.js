@@ -1,40 +1,21 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const button = document.querySelector("button");
+function showLove(){
+alert("Happy Monthsary ❤️\n\nI love you forever, Fathima. Thank you for making my life beautiful.");
+}
 
-    if (button) {
-        button.addEventListener("click", () => {
-            alert("❤️ Happy Monthsary! ❤️\n\nThank you for being part of my life. Every day with you is a blessing. I love you forever. 🌹");
-        });
-    }
+const start = new Date("May 17, 2026");
 
-    // Floating hearts
-    setInterval(() => {
-        const heart = document.createElement("div");
-        heart.innerHTML = "❤️";
-        heart.style.position = "fixed";
-        heart.style.left = Math.random() * window.innerWidth + "px";
-        heart.style.bottom = "-20px";
-        heart.style.fontSize = (20 + Math.random() * 20) + "px";
-        heart.style.animation = "floatUp 5s linear forwards";
-        document.body.appendChild(heart);
+function updateTimer(){
 
-        setTimeout(() => {
-            heart.remove();
-        }, 5000);
-    }, 800);
-});
+const now = new Date();
 
-// Animation for floating hearts
-const style = document.createElement("style");
-style.innerHTML = `
-@keyframes floatUp {
-    from {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateY(-110vh);
-        opacity: 0;
-    }
-}`;
-document.head.appendChild(style);
+const diff = now - start;
+
+const days = Math.floor(diff/(1000*60*60*24));
+
+document.getElementById("timer").innerHTML =
+days + " days together ❤️";
+}
+
+setInterval(updateTimer,1000);
+
+updateTimer();
