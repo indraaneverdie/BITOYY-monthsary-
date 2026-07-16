@@ -73,4 +73,26 @@ html, body {
   100% {
     background-position: 0% 50%;
   }
-    }
+    }html {
+  background: #dff6ff;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #dff6ff, #a2d2ff, #e0f7ff);
+  background-size: 300% 300%;
+  animation: blueMove 8s ease infinite;
+}
+
+@keyframes blueMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
