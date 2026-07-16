@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
 <div class="container">
@@ -20,6 +21,7 @@
 Franz Lhenard N. Cuevas ❤️<br>
 Fathima Juwairiyah Marohonsalic Tandayao
 </h2>
+
 
 <p>
 Together since <b>May 17, 2026</b>
@@ -32,6 +34,8 @@ To my love,
 <br><br>
 
 Happy Monthsary, my DEAREEEEE. Every moment with you is a blessing that I'll always treasure.
+
+<br><br>
 
 Thank you for staying beside me through everything.
 
@@ -58,16 +62,21 @@ I love you endlessly.
 </button>
 
 
-<!-- Heart Message -->
-
 <div id="heartMessage">
+
 ❤️
-<br>
+<br><br>
+
 My heart belongs to you.
+
 <br><br>
+
 Thank you for being part of my life.
+
 <br><br>
+
 I love you endlessly. 💙
+
 </div>
 
 
@@ -75,6 +84,7 @@ I love you endlessly. 💙
 
 
 <h2>📸 Our Memories</h2>
+
 
 <img src="IMG_20260418_012316_361.jpg">
 
@@ -100,7 +110,7 @@ I love you endlessly. 💙
 <br>
 
 
-<audio id="music" loop>
+<audio id="music" autoplay loop>
 <source src="JVKE_-_her_(mp3.pm).mp3" type="audio/mpeg">
 </audio>
 
@@ -119,11 +129,50 @@ I love you endlessly. 💙
 
 <script>
 
-// Open Heart Button
+
+// Music
+
+const music = document.getElementById("music");
+
+
+function toggleMusic(){
+
+if(music.paused){
+
+music.play();
+
+}
+
+else{
+
+music.pause();
+
+}
+
+}
+
+
+// Try autoplay
+
+window.onload = function(){
+
+music.play().catch(()=>{
+
+console.log("Autoplay blocked by browser");
+
+});
+
+};
+
+
+
+
+// Open Heart
 
 function showLove(){
 
 const heart = document.getElementById("heartMessage");
+
 
 if(heart.style.display === "block"){
 
@@ -141,9 +190,16 @@ heart.style.display = "block";
 
 
 
+
 // Floating Hearts
 
-const hearts = ["❤️","💕","💖","💗","💘"];
+const hearts = [
+"❤️",
+"💕",
+"💖",
+"💗",
+"💘"
+];
 
 
 function createHeart(){
@@ -157,6 +213,7 @@ heart.innerHTML = hearts[Math.floor(Math.random()*hearts.length)];
 heart.style.left = Math.random()*100 + "vw";
 
 heart.style.animationDuration = (Math.random()*3+3)+"s";
+
 
 document.body.appendChild(heart);
 
@@ -175,7 +232,7 @@ setInterval(createHeart,500);
 
 
 
-// Monthsary Timer
+// Timer
 
 const startDate = new Date("2026-05-17T00:00:00");
 
@@ -187,33 +244,10 @@ const now = new Date();
 const difference = now - startDate;
 
 
-const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+const days = Math.floor(difference/(1000*60*60*24));
 
-const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+const hours = Math.floor((difference/(1000*60*60))%24);
 
-const minutes = Math.floor((difference / (1000 * 60)) % 60);
+const minutes = Math.floor((difference/(1000*60))%60);
 
-const seconds = Math.floor((difference / 1000) % 60);
-
-
-document.getElementById("timer").innerHTML =
-
-"❤️ " + days + " Days " +
-"💙 " + hours + " Hours " +
-"💕 " + minutes + " Minutes " +
-"✨ " + seconds + " Seconds";
-
-}
-
-
-setInterval(updateTimer,1000);
-
-updateTimer();
-
-
-</script>
-
-
-</body>
-
-</html>
+const seconds =
