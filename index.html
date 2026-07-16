@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
 <div class="container">
@@ -22,12 +21,9 @@ Franz Lhenard N. Cuevas ❤️<br>
 Fathima Juwairiyah Marohonsalic Tandayao
 </h2>
 
-
 <p>
-Together since
-<b>May 17, 2026</b>
+Together since <b>May 17, 2026</b>
 </p>
-
 
 <p>
 To my love,
@@ -63,29 +59,19 @@ I love you endlessly.
 
 <br><br>
 
-
 <h2>📸 Our Memories</h2>
-
 
 <img src="IMG_20260418_012316_361.jpg">
 
-
 <img src="Messenger_creation_20EBF1F1-E947-46F8-9318-7C3BAC04DE5F.jpeg">
-
 
 <img src="Messenger_creation_44627DEB-A4AF-48F1-902D-E49CFB9C7119.jpeg">
 
-
 <img src="Messenger_creation_4949B1AE-92CB-4332-93EF-6AD1D14FE9D2.jpeg">
-
 
 <img src="Messenger_creation_C22F490E-ADDD-47EF-8714-CE3DABCFF4DC.jpeg">
 
-
 <img src="Screenshot_20260701-230520.jpg">
-
-
-<br><br>
 
 
 <h2>⏳ Time Together</h2>
@@ -93,11 +79,8 @@ I love you endlessly.
 <p id="timer"></p>
 
 
-<br>
-
-
 <audio id="music" loop>
-    <source src="JVKE_-_her_(mp3.pm).mp3" type="audio/mpeg">
+<source src="JVKE_-_her_(mp3.pm).mp3" type="audio/mpeg">
 </audio>
 
 
@@ -109,17 +92,14 @@ I love you endlessly.
 </div>
 
 
-
 <script src="script.js"></script>
 
 
 <script>
 
-
 // Floating hearts
 
 const hearts = ["❤️","💕","💖","💗","💘"];
-
 
 function createHeart(){
 
@@ -133,7 +113,6 @@ heart.style.left = Math.random()*100 + "vw";
 
 heart.style.animationDuration = (Math.random()*3+3)+"s";
 
-
 document.body.appendChild(heart);
 
 
@@ -145,15 +124,10 @@ heart.remove();
 
 }
 
-
 setInterval(createHeart,500);
 
 
-
-
-
-// Monthsary Timer
-
+// Timer
 
 const startDate = new Date("2026-05-17T00:00:00");
 
@@ -174,15 +148,10 @@ const minutes = Math.floor((difference/(1000*60))%60);
 const seconds = Math.floor((difference/1000)%60);
 
 
-
 document.getElementById("timer").innerHTML =
-
 days + " Days ❤️ " +
-
 hours + " Hours 💙 " +
-
 minutes + " Minutes 💕 " +
-
 seconds + " Seconds";
 
 }
@@ -192,41 +161,9 @@ setInterval(updateTimer,1000);
 
 updateTimer();
 
-
-
 </script>
 
 
 </body>
 
 </html>
-/* Moving Timer Animation */
-#timer {
-  font-size: 28px;
-  font-weight: bold;
-  color: white;
-  margin: 20px;
-
-  animation: timerGlow 2s ease-in-out infinite;
-  text-shadow: 0 0 10px #ffffff;
-}
-
-
-@keyframes timerGlow {
-
-  0% {
-    transform: scale(1);
-    text-shadow: 0 0 10px white;
-  }
-
-  50% {
-    transform: scale(1.08);
-    text-shadow: 0 0 25px #a2d2ff;
-  }
-
-  100% {
-    transform: scale(1);
-    text-shadow: 0 0 10px white;
-  }
-
-}
