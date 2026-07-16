@@ -1,4 +1,22 @@
-img{<style>
+img{<style><style>
+body {
+  background: linear-gradient(-45deg, #dff6ff, #bde0fe, #a2d2ff, #e0f7ff);
+  background-size: 400% 400%;
+  animation: blueDream 12s ease infinite;
+}
+
+@keyframes blueDream {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+</style>
 body {
   background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffd1ff, #ffdde1);
   background-size: 400% 400%;
